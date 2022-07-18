@@ -11,3 +11,17 @@ public class Application {
     }
 
 }
+//для mustache нужно поменять расширение файла с html на mustache  код:
+/*
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>Hello, {{name}}</div>
+</body>
+</html>
+ */
