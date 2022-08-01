@@ -1,7 +1,9 @@
 package org.example.example2.controller;
 import org.example.example2.domen.Message;
+import org.example.example2.domen.User;
 import org.example.example2.repos.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,7 +32,11 @@ public class MainController {
     }
 
     @PostMapping("/main")
-    public String add(@RequestParam String text, @RequestParam String tag, Map<String, Object> model) {
+    public String add(
+           @AuthenticationPrincipal User user,
+            @RequestParam String text,
+           @RequestParam String tag, Map<String, Object> model
+    ) {
         Message message = new Message(text, tag);
 
         messageRepo.save(message);
