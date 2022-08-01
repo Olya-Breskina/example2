@@ -1,5 +1,4 @@
 package org.example.example2.controller;
-
 import org.example.example2.domen.Role;
 import org.example.example2.domen.User;
 import org.example.example2.repos.UserRepo;
